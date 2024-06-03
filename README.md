@@ -1,13 +1,17 @@
 # java_code_base
 
 ## Init mvn Project
-```
-mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
-```
+use spring initializr to init spring boot project
+https://start.spring.io/
 
 ## Build Project
 ```
 mvn package
+```
+
+## run Project
+```
+mvn spring-boot:run
 ```
 
 ## Debug Mode
