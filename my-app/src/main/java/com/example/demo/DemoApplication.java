@@ -11,7 +11,7 @@ public class DemoApplication {
         SpringApplication application = new SpringApplication(DemoApplication.class);
         application.setApplicationStartup(new BufferingApplicationStartup(2048));
         application.run(args);
-        System.out.println("(♥◠‿◠)ﾉﾞ  springboot 啟動!!   ლ(´ڡ`ლ)ﾞ");
+        System.out.println("٩(๑❛ᴗ❛๑)۶  springboot 啟動!!  ٩(๑❛ᴗ❛๑)۶");
 	}
 
 }

@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: demo
+
+hello:
+  english: Greetings from Spring Boot!
+  chinese: 來自 Spring Boot 的問候！
