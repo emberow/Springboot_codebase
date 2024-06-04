@@ -7,11 +7,12 @@ import org.springframework.boot.context.metrics.buffering.BufferingApplicationSt
 @SpringBootApplication
 public class DemoApplication {
 
-	public static void main(String[] args) {
-        SpringApplication application = new SpringApplication(DemoApplication.class);
-        application.setApplicationStartup(new BufferingApplicationStartup(2048));
-        application.run(args);
-        System.out.println("٩(๑❛ᴗ❛๑)۶  springboot 啟動!!  ٩(๑❛ᴗ❛๑)۶");
-	}
+        private static final int CAPACITY = 2048;
+        public static void main(String[] args) {
+                SpringApplication application = new SpringApplication(DemoApplication.class);
+                application.setApplicationStartup(new BufferingApplicationStartup(CAPACITY));
+                application.run(args);
+                System.out.println("٩(๑❛ᴗ❛๑)۶  springboot 啟動!!  ٩(๑❛ᴗ❛๑)۶");
+        }
 
 }

@@ -24,7 +24,7 @@ public class HelloServiceImpl implements HelloService {
         String language = helloRequestVO.getLanguage();
         Integer repeatTime = helloRequestVO.getRepeatTimes();
 
-        while(repeatTime > 0) {
+        while (repeatTime > 0) {
             repeatTime--;
             if ("chinese".equalsIgnoreCase(language)) {
                 greeting += chineseGreeting + "\n";

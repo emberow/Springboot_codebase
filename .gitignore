@@ -1,5 +1,5 @@
 # Maven 的 target 目錄，包含編譯後的文件
-*/target/
+target/
 
 # 使用的 IDE 相關文件夾和文件
 /.idea/

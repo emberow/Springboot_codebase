@@ -20,24 +20,11 @@ public class HelloController {
 	@Autowired
 	private HelloService helloService;
 
-	/**
-	 * return user input
-	 * 
-     * @param input
-	 * @return input
-     */
 	@GetMapping("/echo")
 	public String echo(@RequestParam String input) {
 		return helloService.echo(input);
 	}
 
-	/**
-	 * return chinese or english greeting
-	 * 
-     * @param language
-	 * @param repeaTimes
-	 * @return greeting words
-     */
 	@PostMapping("/hello")
 	public String hello(@Valid @RequestBody HelloRequestVO helloRequestVO) {
 		return helloService.hello(helloRequestVO);
