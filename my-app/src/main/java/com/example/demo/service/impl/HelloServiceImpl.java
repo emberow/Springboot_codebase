@@ -12,7 +12,7 @@ public class HelloServiceImpl implements HelloService {
     @Value("${hello.chinese}")
     private String chineseGreeting;
 
-    @Value("${hello.chinese}")
+    @Value("${hello.english}")
     private String englishGreeting;
 
     public String echo(String input) {
