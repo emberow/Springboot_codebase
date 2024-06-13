@@ -27,3 +27,6 @@ It will generate a coverage report at /target/site/jacoco/index.html
 ``` bash
 mvn clean test
 ```
+
+## swagger
+http://localhost:8080/swagger-ui/index.html
