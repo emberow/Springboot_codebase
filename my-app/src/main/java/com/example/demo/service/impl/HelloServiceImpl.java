@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 import com.example.demo.requestVO.HelloRequestVO;
 import com.example.demo.service.HelloService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 public class HelloServiceImpl implements HelloService {
 
@@ -32,7 +35,7 @@ public class HelloServiceImpl implements HelloService {
                 greeting += englishGreeting + "\n";
             }
         }
-
+        log.info("use: " + language + " to greeting~");
         return greeting;
     }
 }
