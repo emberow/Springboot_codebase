@@ -1,4 +1,4 @@
-package com.example.demo.requestVO;
+package com.example.demo.vo;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;

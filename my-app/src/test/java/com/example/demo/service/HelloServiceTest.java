@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.example.demo.requestVO.HelloRequestVO;
+import com.example.demo.vo.HelloRequestVO;
 
 @SpringBootTest
 public class HelloServiceTest {

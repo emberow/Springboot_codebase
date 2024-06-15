@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.requestVO.HelloRequestVO;
+import com.example.demo.vo.HelloRequestVO;
 
 public interface HelloService {
 

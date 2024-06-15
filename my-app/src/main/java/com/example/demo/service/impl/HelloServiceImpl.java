@@ -3,8 +3,8 @@ package com.example.demo.service.impl;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.requestVO.HelloRequestVO;
 import com.example.demo.service.HelloService;
+import com.example.demo.vo.HelloRequestVO;
 
 import lombok.extern.slf4j.Slf4j;
 
