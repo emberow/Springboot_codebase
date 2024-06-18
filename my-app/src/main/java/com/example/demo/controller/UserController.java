@@ -27,38 +27,35 @@ public class UserController {
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<User>> getUserById(@PathVariable Long id) {
         User data = userMapper.getUserById(id);
-        ApiResponse<User> response = new ApiResponse<>(200, "successed", data);
+        ApiResponse<User> response = new ApiResponse<>(HttpStatus.OK.value(), "successed", data);
 		return new ResponseEntity<>(response, HttpStatus.OK);
     }
-    
 
     @GetMapping("")
     public ResponseEntity<ApiResponse<List<User>>> getAllUsers() {
         List<User> data = userMapper.getAllUsers();
-        ApiResponse<List<User>> response = new ApiResponse<>(200, "successed", data);
+        ApiResponse<List<User>> response = new ApiResponse<>(HttpStatus.OK.value(), "successed", data);
         return new ResponseEntity<>(response, HttpStatus.OK);
-        
     }
 
     @PostMapping("")
     public ResponseEntity<ApiResponse<String>> insertUser(@RequestBody User user) {
         userMapper.insertUser(user);
-        ApiResponse<String> response = new ApiResponse<>(200, "successed", null);
+        ApiResponse<String> response = new ApiResponse<>(HttpStatus.OK.value(), "successed", null);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @PutMapping("")
     public ResponseEntity<ApiResponse<String>> updateUser(@RequestBody User user) {
         userMapper.updateUser(user);
-        ApiResponse<String> response = new ApiResponse<>(200, "successed", null);
+        ApiResponse<String> response = new ApiResponse<>(HttpStatus.OK.value(), "successed", null);
         return new ResponseEntity<>(response, HttpStatus.OK);
-        
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<ApiResponse<String>> deleteUser(@PathVariable Long id) {
         userMapper.deleteUser(id);
-        ApiResponse<String> response = new ApiResponse<>(200, "successed", null);
+        ApiResponse<String> response = new ApiResponse<>(HttpStatus.OK.value(), "successed", null);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }

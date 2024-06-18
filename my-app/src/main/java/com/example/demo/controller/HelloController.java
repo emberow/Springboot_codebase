@@ -26,14 +26,14 @@ public class HelloController {
 	@GetMapping("/echo")
 	public ResponseEntity<ApiResponse<String>> echo(@RequestParam String input) {
 		String data = helloService.echo(input);
-		ApiResponse<String> response = new ApiResponse<>(200, "successed", data);
+		ApiResponse<String> response = new ApiResponse<>(HttpStatus.OK.value(), "successed", data);
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
 
 	@PostMapping("/hello")
 	public ResponseEntity<ApiResponse<String>> hello(@Valid @RequestBody HelloRequestVO helloRequestVO) {
 		String data = helloService.hello(helloRequestVO);
-		ApiResponse<String> response = new ApiResponse<>(200, "successed", data);
+		ApiResponse<String> response = new ApiResponse<>(HttpStatus.OK.value(), "successed", data);
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
 

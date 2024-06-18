@@ -22,14 +22,14 @@ public class GlobalExceptionHandler {
                 .map(DefaultMessageSourceResolvable::getDefaultMessage)
                 .collect(Collectors.toList());
         String errString = errors.toString();
-        ApiResponse<String> response = new ApiResponse<>(400, errString, null);
+        ApiResponse<String> response = new ApiResponse<>(HttpStatus.BAD_REQUEST.value(), errString, null);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 
     // unexpected exception
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiResponse<String>> handleException(Exception ex) {
-        ApiResponse<String> response = new ApiResponse<>(500, ex.getMessage(), null);
+        ApiResponse<String> response = new ApiResponse<>(HttpStatus.INTERNAL_SERVER_ERROR.value(), ex.getMessage(), null);
         return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
