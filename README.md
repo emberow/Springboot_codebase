@@ -30,7 +30,8 @@ mvn spring-boot:run
 use vscode built-in debug mode.
 
 ## Lint check
-Use VS Code’s EditorConfig extension for lint checking:
+Use VS Code’s EditorConfig extension for lint checking
+
 please use vscode extension => "EditorConfig for VS Code"
 
 ## CLI Lint check
@@ -47,4 +48,5 @@ mvn clean test
 
 ## swagger
 Access the Swagger UI to view and test API endpoints:
+
 [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
